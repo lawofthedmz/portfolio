@@ -3,7 +3,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import therabot from '@/assets/projects/therabot.PNG';
 const projects = [
     { name: 'Therabot', image: '/projects/therabot.PNG' },
     { name: 'CyBot Navigator', image: '/assets/projects/cybot.png' },
