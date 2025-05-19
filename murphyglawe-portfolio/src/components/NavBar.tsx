@@ -1,0 +1,60 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
+const sections = ['home', 'about', 'projects', 'experience', 'contact'];
+
+export default function NavBar() {
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    sections.forEach((section) => {
+      const el = document.getElementById(section);
+      if (el) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setActiveSection(section);
+            }
+          },
+          { threshold: 0.5 }
+        );
+        observer.observe(el);
+        observers.push(observer);
+      }
+    });
+
+    return () => observers.forEach((observer) => observer.disconnect());
+  }, []);
+
+  const handleClick = (section: string) => {
+    const el = document.getElementById(section);
+    el?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-neutral-800/80 rounded-full px-4 py-2 backdrop-blur border border-neutral-700">
+      <ul className="flex space-x-1 relative">
+        {sections.map((section) => {
+          const isActive = activeSection === section;
+          return (
+            <li key={section}>
+              <button
+                onClick={() => handleClick(section)}
+                className={`relative z-10 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-300 ${
+                  isActive
+                    ? 'text-black bg-cyan-400'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
