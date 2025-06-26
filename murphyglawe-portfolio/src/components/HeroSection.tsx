@@ -4,7 +4,7 @@ import { Mail, FileText } from 'lucide-react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 export default function HeroSection() {
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <section id="home" className="min-h-[85vh] flex flex-col justify-center items-center text-center px-6">
       <motion.h1
         className="text-5xl font-bold text-[color:var(--foreground)] mb-4"
         initial={{ opacity: 0, y: -30 }}
