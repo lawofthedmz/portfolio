@@ -2,7 +2,8 @@
 import { Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-const sections = ['home', 'about', 'projects', 'experience', 'contact'];
+// const sections = ['home', 'about', 'projects', 'experience', 'contact'];
+const sections = ['home', 'about', 'experience', 'contact']; // 'projects' removed temporarily
 
 export default function NavBar() {
   const [activeSection, setActiveSection] = useState('home');
