@@ -3,7 +3,7 @@
 import { Mail, FileText } from 'lucide-react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import ProjectsSection from '@/components/ProjectsSection';
+// import ProjectsSection from '@/components/ProjectsSection';
 import ProjectMarquee from '@/components/ProjectMarquee';
 import ExperienceSection from '@/components/ExperienceSection';
 import ContactSection from '@/components/ContactSection';
