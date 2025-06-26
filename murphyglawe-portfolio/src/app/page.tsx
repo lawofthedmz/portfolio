@@ -1,7 +1,13 @@
 'use client';
 
 import { Mail, FileText } from 'lucide-react';
-import { SiGithub, SiLinkedin } from 'react-icons/si';import HeroSection from '@/components/HeroSection';
+import dynamic from 'next/dynamic';
+const SiGithub = dynamic(() =>
+  import('react-icons/si').then((mod) => mod.SiGithub)
+);
+const SiLinkedin = dynamic(() =>
+  import('react-icons/si').then((mod) => mod.SiLinkedin)
+);
 import AboutSection from '@/components/AboutSection';
 // import ProjectsSection from '@/components/ProjectsSection';
 import ProjectMarquee from '@/components/ProjectMarquee';
