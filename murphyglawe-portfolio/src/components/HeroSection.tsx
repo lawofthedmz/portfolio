@@ -1,7 +1,14 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Mail, FileText } from 'lucide-react';
-import { SiGithub, SiLinkedin } from 'react-icons/si';
+import dynamic from 'next/dynamic';
+
+const SiGithub = dynamic(() =>
+  import('react-icons/si').then((mod) => mod.SiGithub)
+);
+const SiLinkedin = dynamic(() =>
+  import('react-icons/si').then((mod) => mod.SiLinkedin)
+);
 export default function HeroSection() {
   return (
     <section id="home" className="min-h-[85vh] flex flex-col justify-center items-center text-center px-6">
