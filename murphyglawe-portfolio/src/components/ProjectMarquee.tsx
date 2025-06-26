@@ -5,8 +5,12 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 const projects = [
     { name: 'Therabot', image: '/projects/therabot.PNG' },
-    { name: 'CyBot Navigator', image: '/assets/projects/cybot.png' },
-    { name: 'News Aggregator', image: '/assets/projects/news-ai.png' },
+    { name: 'CDC', image: '/projects/cdc.png' },
+    { name: 'Football Game', image: '/projects/isu.png' },
+    { name: 'Yale', image: '/projects/yale.png' },
+    { name: 'YHack', image: '/projects/yhack.png' },
+    { name: 'NYC', image: '/projects/nyc.png' },
+    { name: 'Cybot', image: '/projects/cybot.png' },
 ];
 
 export default function ProjectMarquee() {
