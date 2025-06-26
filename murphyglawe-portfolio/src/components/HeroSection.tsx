@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center px-6">
       <motion.h1
-        className="text-5xl font-bold mb-4"
+        className="text-5xl font-bold text-[color:var(--foreground)] mb-4"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -14,7 +14,7 @@ export default function HeroSection() {
         Murphy Glawe
       </motion.h1>
       <motion.p
-        className="text-xl text-gray-400 max-w-xl"
+        className="text-xl text-[color:var(--foreground)] max-w-xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}

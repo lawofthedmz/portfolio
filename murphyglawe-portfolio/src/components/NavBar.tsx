@@ -11,9 +11,11 @@ export default function NavBar() {
   useEffect(() => {
     const root = document.documentElement;
     if (darkMode) {
-      root.classList.add('dark');
+      root.style.setProperty('--background', '#0a0a0a');
+      root.style.setProperty('--foreground', '#ededed');
     } else {
-      root.classList.remove('dark');
+      root.style.setProperty('--background', '#ffffff');
+      root.style.setProperty('--foreground', '#171717');
     }
   }, [darkMode]);
 

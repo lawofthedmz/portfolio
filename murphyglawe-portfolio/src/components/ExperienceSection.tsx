@@ -63,7 +63,7 @@ const experiences = [
 export default function ExperienceSection() {
   return (
     <section id="experience" className="min-h-screen px-6 py-24 max-w-4xl mx-auto">
-      <h2 className="text-4xl font-bold mb-12 flex items-center gap-3 text-white">
+      <h2 className="text-4xl font-bold mb-12 flex items-center gap-3 text-[color:var(--foreground)]">
         <Briefcase className="w-7 h-7" />
         Experience
       </h2>
@@ -88,13 +88,13 @@ export default function ExperienceSection() {
             {/* Text */}
             <div className="flex-1">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                <h3 className="text-xl font-semibold text-white">{exp.role}</h3>
-                <span className="text-base text-gray-400 mt-1 sm:mt-0">{exp.date}</span>
+                <h3 className="text-xl font-semibold text-[color:var(--foreground)]">{exp.role}</h3>
+                <span className="text-base text-[color:var(--foreground)] mt-1 sm:mt-0">{exp.date}</span>
               </div>
-              <p className="text-gray-400 text-base mb-3">
+              <p className="text-[color:var(--foreground)] text-base mb-3">
                 {exp.company} – {exp.location}
               </p>
-              <ul className="list-disc ml-5 space-y-2 text-gray-300 text-base">
+              <ul className="list-disc ml-5 space-y-2 text-[color:var(--foreground)] text-base">
                 {exp.bullets.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}

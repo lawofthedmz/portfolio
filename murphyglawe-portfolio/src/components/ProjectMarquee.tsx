@@ -41,7 +41,7 @@ export default function ProjectMarquee() {
                 className="relative flex-shrink-0 w-96 h-64 rounded-lg overflow-hidden group"
                 style={{ transform: `translateX(${index * 192}px)` }}
               >
-                <div className="absolute inset-0 border border-gray-700 rounded-lg pointer-events-none" />
+                <div className="absolute inset-0 rounded-lg pointer-events-none" />
                 <Image
                     src={project.image}
                     alt={project.name}

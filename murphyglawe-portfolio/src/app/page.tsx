@@ -10,7 +10,14 @@ import ContactSection from '@/components/ContactSection';
 
 export default function Home() {
   return (
-    <main className="bg-black text-white">
+    <main
+      className="min-h-screen"
+      style={{
+        backgroundColor: 'var(--background)',
+        color: 'var(--foreground)',
+        transition: 'background-color 0.3s ease, color 0.3s ease',
+      }}
+    >
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
@@ -18,13 +25,13 @@ export default function Home() {
       <ExperienceSection />
       <ContactSection />
 
-      <footer className="border-t border-gray-700 py-6 px-6 text-gray-400 text-sm flex flex-col md:flex-row items-center justify-between">
+      <footer className="border-t border-gray-700 py-6 px-6 text-[color:var(--foreground)] text-sm flex flex-col md:flex-row items-center justify-between">
         <div className="text-center md:text-left">
           <p>© {new Date().getFullYear()} Murphy Glawe. All rights reserved.</p>
           <p className="mt-2">
-            Built with <a className="underline hover:text-white" href="https://react.dev/">React</a>,{' '}
-            <a className="underline hover:text-white" href="https://tailwindcss.com/">Tailwind</a>.{' '}
-            Source available on <a className="underline hover:text-white" href="https://github.com/lawofthedmz">GitHub</a>.
+            Built with <a className="underline hover:text-gray-400" href="https://react.dev/">React</a>,{' '}
+            <a className="underline hover:text-gray-400" href="https://tailwindcss.com/">Tailwind</a>.{' '}
+            Source available on <a className="underline hover:text-gray-400" href="https://github.com/lawofthedmz">GitHub</a>.
           </p>
         </div>
         <div className="mt-4 md:mt-0 flex gap-4">

@@ -18,11 +18,11 @@ export default function ContactSection() {
       transition={{ duration: 1.0 }}
       className="flex items-center justify-center px-6 py-32"
     >
-      <div className="relative w-full max-w-5xl text-center rounded-3xl px-8 py-16 overflow-hidden text-white">
+      <div className="relative w-full max-w-5xl text-center rounded-3xl px-8 py-16 overflow-hidden text-[color:var(--foreground)]">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
           Let's work together
         </h2>
-        <p className="text-lg mb-6 text-gray-300">
+        <p className="text-lg mb-6 text-[color:var(--foreground)]">
           I'm open to new opportunities and collaborations. Feel free to reach out!
         </p>
 
