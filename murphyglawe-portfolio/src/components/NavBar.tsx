@@ -1,11 +1,21 @@
 'use client';
-
+import { Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const sections = ['home', 'about', 'projects', 'experience', 'contact'];
 
 export default function NavBar() {
   const [activeSection, setActiveSection] = useState('home');
+  const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (darkMode) {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+  }, [darkMode]);
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -36,7 +46,7 @@ export default function NavBar() {
 
   return (
     <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-neutral-800/80 rounded-full px-4 py-2 backdrop-blur border border-neutral-700">
-      <ul className="flex space-x-1 relative">
+      <ul className="flex space-x-1 relative items-center">
         {sections.map((section) => {
           const isActive = activeSection === section;
           return (
@@ -54,6 +64,15 @@ export default function NavBar() {
             </li>
           );
         })}
+        <li>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="ml-2 p-2 text-white hover:text-cyan-400 transition rounded-full"
+            aria-label="Toggle Theme"
+          >
+            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+        </li>
       </ul>
     </div>
   );
