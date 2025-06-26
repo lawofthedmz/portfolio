@@ -16,7 +16,6 @@ Visit: [https://murphyglawe.com](https://murphyglawe.com)
 ├── src/
 │   ├── app/             # Next.js app directory
 │   ├── components/      # All React components (Hero, About, Experience, etc.)
-│   ├── styles/          # Global styles and Tailwind CSS imports
 ├── postcss.config.js    # PostCSS config
 └── next.config.js       # Next.js configuration
 ```
@@ -29,25 +28,18 @@ Visit: [https://murphyglawe.com](https://murphyglawe.com)
 - Built with:
   - React / Next.js App Router
   - TypeScript
-  - Tailwind CSS
+  - Tailwind 
   - Framer Motion (animations) barely
 - Resume, LinkedIn, GitHub & email links
 - Fully deployed via Vercel
 
 ---
 
-## 📄 License
+## License
 
 MIT — free to modify and use.
 
 ---
-
-## 🙋‍♂️ About Me
-
-Murphy Glawe — Cybersecurity Engineering student at Iowa State. Passionate about infrastructure, red/blue teaming, and leadership. Future CISO in the making.
-
 Let's connect: [LinkedIn](https://linkedin.com/in/murphy-glawe)
-
 ---
 
-> Built with ❤️ 
