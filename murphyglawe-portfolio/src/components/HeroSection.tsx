@@ -26,7 +26,7 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        Cybersecurity Engineering student at Iowa State. Passionate about infrastructure, red/blue teaming, and leadership. Future CISO in the making.
+        Cybersecurity Engineering student at Iowa State. Passionate about infrastructure, red/blue teaming, and leadership.
       </motion.p>
       <div className="mt-6 flex gap-4">
         <a href="mailto:contact@murphyglawe.com" className="hover:text-cyan-400 transition">
